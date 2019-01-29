@@ -18,7 +18,9 @@ var arr = [10,20,30];
 */
 
 //Code Here
-
+function first(arr) {
+  return arr[0]
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -34,7 +36,9 @@ var arr = [40,50,60];
 
 //Code Here
 
-
+function last(arr){
+  return arr[2]
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -49,7 +53,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 
 //Code Here
 
-
+function looper(family){
+  for (var i=0; i<family.length; i++){
+    alert(family[i])
+  }
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -63,7 +71,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
+function reversedLooper(letters){
+  for(var i=letters.length-1; i>=0; i--) {
+    alert(letters[i])
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -79,7 +91,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
 //Code Here
 
-
+function evenFinder(nums){
+  let evens =[]
+  for(i=0; i<nums.length; i++){
+    if(nums[i]%2===0){
+      evens.push(nums[i])
+    }
+  }
+  return evens
+}
 
 
 
@@ -102,12 +122,24 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 /*
   Write a function called divider that is given one argument, numbersArray.
-  Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
+  Have divider return an Array with the first item in the array being the evens array (all the even values 
+    from numbersArray) and the second item in the Array being the odds array (all the odd values from 
+      numbersArray).
 */
 
 //Code Here
-
-
+function divider(numbersArray){
+  let evensAndOdds = [[],[]]
+    for(var i = 0; i<numbersArray.length; i++){
+      if(numbersArray[i]%2===0){
+        evensAndOdds[0].push(numbersArray[i])
+      }
+  else {
+   evensAndOdds[1].push(numbersArray[i])
+  }
+}
+  return evensAndOdds
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -119,7 +151,8 @@ var getRandomArbitrary = function() {
 
 /* 
   var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
-  Above you're given a function that will return a random number between 0 and 30. There is also a commented out array full of numbers to help you visualize what your function will be receiving.
+  Above you're given a function that will return a random number between 0 and 30. There is also a commented 
+  out array full of numbers to help you visualize what your function will be receiving.
   Write a function named finder that will take in an array as an argument.
   It will then  get a random number (by invoking getRandomArbitrary).
   Loop through the array to see if that random number is in the array. 
@@ -127,7 +160,10 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-
+function finder(arr){
+  var randomNumber = getRandomArbitrary()
+  return arr.indexOf(randomNumber) > -1
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -137,12 +173,16 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 // Do not edit the code above.
 
 /*
-  Here we're going to write a function that mimics going shopping and checking things off of our grocery list and adding new items to our list.
+  Here we're going to write a function that mimics going shopping and checking things off of our grocery list 
+  and adding new items to our list.
 
-  Write a function called removeItem that is given two arguments, the first is myGroceryList, and the second is an item to remove from myGroceryList. 
-  If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from the your grocery list and return the new, updated grocery list.
+  Write a function called removeItem that is given two arguments, the first is myGroceryList, and the 
+  second is an item to remove from myGroceryList. 
+  If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item 
+  from the your grocery list and return the new, updated grocery list.
 
-  Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList and the second is an item to add to your grocery list. 
+  Once you do that, write another function called addItem that is given two arguments, the first is 
+  myGroceryList and the second is an item to add to your grocery list. 
   In addItem add the item you passed in to myGroceryList then return the new, updated grocery list.
 
   In both removeItem and addItem check to see if the 'myGroceryList' and 'item' arguments are truthy.
@@ -157,7 +197,7 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
-
+// function removeItem(myGroceryList,removeItem)
 
 ////////// PROBLEM 9 //////////
 
